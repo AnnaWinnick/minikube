@@ -25,7 +25,7 @@ kubectl get services
 We have a Service called Kubernetes that is created by default when minikube starts the cluster. To create a new service and expose it to external traffic we'll use the expose command with NodePort as parameter.
 
 ```shell
-kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
+kubectl expose pod $POD_NAME --type="NodePort" --port 8080
 ```
 
 Let's run again the `get services` command:
